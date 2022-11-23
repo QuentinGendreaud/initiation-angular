@@ -16,7 +16,7 @@ export class LoginComponent {
   login(login: string, password: string) {
     this.userService.login(login, password).pipe(first()).subscribe((user) => {
       sessionStorage.setItem(SessionKeyEnum.User, JSON.stringify(user));
-      this.router.navigate(['nextElementPath']);
+      // this.router.navigate(['nextElementPath']);
     });
   }
 }
