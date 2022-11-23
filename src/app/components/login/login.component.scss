@@ -1,0 +1,21 @@
+$card-height: 300px;
+$card-width: 240px;
+
+.login-screen {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../assets/app-backgound.jpg");
+
+    & .login-card {
+        height: $card-height;
+        width: $card-width;
+        position: absolute;
+        top: calc(50% - $card-height / 2);
+        left: calc(50% - $card-width / 2);
+
+        & .mat-card-header {
+            display: block;
+            text-align: center;
+        }
+    }
+}
