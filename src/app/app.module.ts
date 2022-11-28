@@ -8,11 +8,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { PronosticComponent } from './components/pronostic/pronostic.component';
+import { ErrorComponent } from './components/error/error.component';
+import { LoginGuard } from './guards/login.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    PronosticComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -21,9 +28,11 @@ import {MatCardModule} from '@angular/material/card';
     SharedModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

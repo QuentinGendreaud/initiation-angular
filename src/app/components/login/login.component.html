@@ -5,13 +5,23 @@
         </mat-card-header>
         <mat-card-content>
             <div class="card-content">
-                Card Content to be defined soon...
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field class="example-form-field">
+                        <mat-label>Login</mat-label>
+                        <input id="loginField" matInput type="text" formControlName="login">
+                    </mat-form-field>
+                    <mat-form-field class="example-form-field">
+                        <mat-label>Password</mat-label>
+                        <input id="passwordField" matInput type="password" formControlName="password">
+                    </mat-form-field>
+                    <button 
+                        mat-raised-button 
+                        color="primary"
+                        type="submit"
+                        [disabled]="loginForm.invalid"
+                    >Valider</button>
+                </form>
             </div>
-
-            
         </mat-card-content>
-        <mat-card-actions>
-            <button mat-raised-button color="primary" (click)="login('root', 'root')">MockedLogin</button>
-          </mat-card-actions>
     </mat-card>
 </div>
