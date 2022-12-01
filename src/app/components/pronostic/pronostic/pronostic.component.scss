@@ -1,0 +1,26 @@
+.flag {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #333;
+    border-radius: 90%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    .col {
+        .col-bottom {
+            height: 100%;
+            align-self: self-end;
+            margin-top: 60px;
+        }
+
+        .prono-button {
+            height: 15px;
+            width: 25px;
+            border: 1px solid #333;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<!-- Page Card element -->
+<mat-card class="prono-container">
+    <mat-card-content>
+        <div *ngFor="let userMatch of userPronostics$ | async" class="pronoElement">
+            <mat-card class="prono-element">
+                <mat-card-title>Match {{
+                    userMatch.teamA && userMatch.teamB ? 
+                    userMatch.teamA.name + " - " + userMatch.teamB.name
+                    : userMatch.id}} :
+                </mat-card-title>
+                <mat-card-content>
+                    <app-pronostic [match]="userMatch" (updateProno)="updateProno($event)"></app-pronostic>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </mat-card-content>
+</mat-card>

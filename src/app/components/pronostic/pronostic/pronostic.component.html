@@ -1,0 +1,19 @@
+<div class="match">
+    <div class="row">
+        <div class="col">
+            <div>{{match.teamA?.name}}</div>
+            <img [src]="match.teamA?.flagUrl" class="flag"/>
+            <div class="prono-button" (click)="sendProno(pronoEnum.ATeamWin)"></div>
+        </div>
+        <div class="col">
+            <div class="col-bottom">
+                <div class="prono-button" (click)="sendProno(pronoEnum.Draw)"></div>
+            </div>
+        </div>
+        <div class="col">
+            <div>{{match.teamB?.name}}</div>
+            <img [src]="match.teamB?.flagUrl" class="flag"/>
+            <div class="prono-button" (click)="sendProno(pronoEnum.BTeamWin)"></div>
+        </div>
+    </div>
+</div>

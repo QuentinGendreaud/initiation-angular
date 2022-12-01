@@ -10,16 +10,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
-import { PronosticComponent } from './components/pronostic/pronostic.component';
+import { PronosticComponent } from './components/pronostic/pronostic/pronostic.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LoginGuard } from './guards/login.guard';
+import { PronosticViewComponent } from './components/pronostic/pronostic-view/pronostic-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PronosticComponent,
-    ErrorComponent
+    ErrorComponent,
+    PronosticViewComponent
   ],
   imports: [
     BrowserModule,
